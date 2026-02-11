@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Indie_Flower } from "next/font/google";
+import { AuthProvider } from "@/contexts/AuthContext";
 import "./globals.css";
 
 const indieFlower = Indie_Flower({
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body
         className={`${indieFlower.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );

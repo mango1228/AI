@@ -1,7 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx next dev:*)"
+      "Bash(npx next dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(dir:*)",
+      "Bash(npm run dev:*)",
+      "Bash(cmd /c \"npm config get prefix\")",
+      "Bash(npm install:*)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
 }
